@@ -1,2 +1,7 @@
 framework:
-    lock: '%env(LOCK_DSN)%'
+    lock:
+        # Default lock store (used by autowired LockFactory)
+        default: '%env(LOCK_DSN)%'
+
+        # Named store specifically for fund transfers
+        transfer: '%env(LOCK_DSN)%'
